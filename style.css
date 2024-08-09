@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #77E4C8;
+    --cor-quar: #22D4FD;
+    --cor-horver: #272727;
+    --cor-rei: #F5004F;
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20rem;
+  font-size: 30px;
+  color: var(--cor-horver);
+  font-family: var(--fonte-secundaria);
+}
+
+body {
+  margin: 5rem 5rem 0rem 5rem;
+}
+
+main, html {
+  margin: 1rem 2rem 0 2rem;
+  padding: 0;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebf1f8;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  flex-wrap: wrap;
+  padding: 1rem 1rem 1rem 1rem;
+
+  border-radius: 24px;
+  border: 2px solid #0F67B1;
+  box-shadow: 4px 4px 15px 0px #3FA2F6;
+  background-size: 100% 100%;
+  background-image: url("img/Ruido.png");
+  position: relative;
+}
+
+.button {
+  padding: 20px 20px;
+  margin: 10px;
+  border: none;
+  background-color: var(--cor-quar);
+  font-family: var(--fonte-secundaria);
+  font-size: 2.0rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 4px 4px 15px 0px #3FA2F6;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+.buttonRei {
+  padding: 20px 20px;
+  margin: 10px;
+  border: none;
+  background-color: var(--cor-rei);
+  font-family: var(--fonte-secundaria);
+  color: white;
+  font-size: 2.0rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 4px 4px 15px 0px #3FA2F6;
+}
+
+/* Tag assinatura */
+
+.footer{
+  display: flex;
+  justify-content: end;
+  margin: 5rem 0 0 0;
+  
+}
+
+.ass{
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  color: var(--cor-primaria);
+  background-color: var(--cor-quar);
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  /* position:fixed; */
+  bottom:0;
+  width:100vw;
+}
