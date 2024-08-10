@@ -142,8 +142,23 @@ main, html {
 @media(max-width: 920px){
 
   header {
-    margin-top: 15rem 10rem;
     font-size: 12px;
+  }
+
+  body {
+    margin: 3rem 2rem 0rem 2rem;
+  }
+
+  .button {
+    padding: 10px 10px;
+    margin: 5px;
+    font-size: 1.0rem;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: end;
+    margin: 1rem 0 0 0;
   }
 
 }
