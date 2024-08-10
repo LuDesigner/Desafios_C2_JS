@@ -151,6 +151,43 @@ function metros(){
     exibirTextoNaTela('p', `O resultado dos metros quadrados é de R$ ${resultadoMetros}`);
 }
 
+function cres(){
+
+    let a = parseInt(prompt("Me diga um número"));
+    let b = parseInt(prompt("Me diga um número"));
+    let c = parseInt(prompt("Me diga um número"));
+
+    let numerosOrdenados = [a, b, c].sort((x, y) => x - y);
+    exibirTextoNaTela('p', `Números ordenados: ${numerosOrdenados.join(', ')}`);
+    // console.log(`Números ordenados: ${numerosOrdenados.join(', ')}`);
+}
+
+
+function decr(){
+
+    let d = parseInt(prompt("Me diga um número"));
+    let e = parseInt(prompt("Me diga um número"));
+    let f = parseInt(prompt("Me diga um número"));
+
+    let numerosOrdenados = [d, e, f].sort((y, x) => x - y);
+    exibirTextoNaTela('p', `Números ordenados: ${numerosOrdenados.join(', ')}`);
+    // console.log(`Números ordenados: ${numerosOrdenados.join(', ')}`);
+}
+
+function pali(){
+    let palavraPali = prompt("Me diga uma palavra");
+    let separandoAsLetrasDaPalavra = palavraPali.split("");
+
+    let palavraInvertida = separandoAsLetrasDaPalavra.reverse();
+    palavraInvertida = palavraInvertida.join("");
+
+    if(palavraPali == palavraInvertida) {
+        exibirTextoNaTela('p', `A palavra ` + palavraPali + ` é um palindromo:${separandoAsLetrasDaPalavra}`);
+    } else {
+        exibirTextoNaTela('p', `A palavra ` + palavraPali + ` não é um palindromo:${separandoAsLetrasDaPalavra}`);
+    }
+}
+
 function reiniciar() {
     mensagemInicial();
 }
