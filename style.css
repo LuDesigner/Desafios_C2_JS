@@ -108,3 +108,33 @@ main, html {
   bottom:0;
   width:100vw;
 }
+
+
+@media(max-width: 920px){
+
+  header {
+    margin-top: 15rem 10rem;
+    font-size: 18px;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 20fr);
+  }
+
+  .button {
+    padding: 10px 10px;
+    margin: 5px;
+    font-size: 1.0rem;
+  }
+
+  .buttonRei {
+    padding: 10px 10px;
+    margin: 5px;
+    font-size: 1.0rem;
+  }
+
+  .ass {
+    font-size: 1rem;
+  }
+
+}
