@@ -151,6 +151,21 @@ function metros(){
     exibirTextoNaTela('p', `O resultado dos metros quadrados é de R$ ${resultadoMetros}`);
 }
 
+function temp(){
+    let temp01 = prompt('Olá, me digita a escala que deseja celsius ou fahrenheit');
+    let x = parseInt(prompt("Escolha um valor para ver a diferença entre as temperaturas!"));
+    let celsius = ((x * 1.8) + 32);
+    let fahrenheit = ((x -32 ) / 1.8);
+
+    if(temp01 === 'celsius'){
+        return  exibirTextoNaTela('p', `A diferença da temperatura de ${temp01} para fahrenheit é de ${celsius}`);
+    }else if(temp01 === 'fahrenheit'){
+        return exibirTextoNaTela('p', `A diferença da temperatura de ${temp01} para celsius é de ${fahrenheit}`);
+    }else{
+        return "Escala inválida";
+    }
+}
+
 function cres(){
 
     let a = parseInt(prompt("Me diga um número"));
@@ -186,6 +201,20 @@ function pali(){
     } else {
         exibirTextoNaTela('p', `A palavra ` + palavraPali + ` não é um palindromo:${separandoAsLetrasDaPalavra}`);
     }
+}
+
+function parInp(){
+
+    let numeroPI = parseInt(prompt("Digite um número qualquer"));
+
+    total = numeroPI / 2;
+
+    if( numeroPI % 2 == 0) {
+        exibirTextoNaTela('p', `${numeroPI} é par`);
+    } else {
+        exibirTextoNaTela('p', `${numeroPI} é Impar`);
+    }
+
 }
 
 function reiniciar() {
