@@ -4,7 +4,7 @@
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag); 
     campo.innerHTML = texto;
-    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
+    // responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
 }
 
 function mensagemInicial () {
@@ -47,16 +47,22 @@ function verificarPrompt() {
 
 function verificarDob() {
     let dob1 = parseInt(prompt('Me diga um número inteiro'));
-    let resultad = (dob1 * 2);
+    if(dob1 != Number){
+        exibirTextoNaTela('p', `Preencha o campo com um número`);
+    }else{
+        let resultad = (dob1 * 2);
     exibirTextoNaTela('p', `O dobro do valor ${dob1} é de ${resultad}`);
+    }
     // alert(`O dobro do valor ${dob1} é de ${resultad}`)
 }
 
 function verificarSoma() {
-    let valor1 = parseInt(prompt('Me diga um número inteiro'));
-    let valor2 = parseInt(prompt('Me diga outro valor'));
+    let valor1 = parseInt(prompt('Me diga um número inteiro'));;
+    let valor2 = parseInt(prompt('Me diga um número inteiro'));;
+
     let resultado = (valor1 + valor2);
     exibirTextoNaTela('p', `O resultado do valor ${valor1} somado pelo valor ${valor2} é igual a ${resultado}`);
+
     // alert(`O resultado do ${valor1} somado ao ${valor2} é ${resultado}`)
     // console.log('A soma foi clicada');
     // console.log(`A soma do valor ${valor1} + ${valor2} é de ${resultado}`)
@@ -137,18 +143,18 @@ function imc(){
 
 // resolver número quebrado
 function dolar(){
-    let dolar1 = parseInt(prompt('Qual a valor em Real? (informe somente número)'));
-    let dolar2 = parseInt(prompt('Qual o valor do Cambio? (informe somente número)'));
+    let dolar1 = prompt('Qual a valor em Real? (informe somente número e use "." nos valores decimais)');
+    let dolar2 = prompt('Qual o valor do Cambio? (informe somente número e use "." nos valores decimais)');
     let resultadoDolar = (dolar1 * dolar2);
-    exibirTextoNaTela('p', `A conversão é de R$ ${resultadoDolar}`);
+    exibirTextoNaTela('p', `A conversão é de R$ ${resultadoDolar.toFixed(2)}`);
 }
 
 // resolver número quebrado
 function metros(){
-    let metros1 = parseInt(prompt('Qual a largura? (informe somente número)'));
-    let metros2 = parseInt(prompt('Qual o cumprimento? (informe somente número)'));
+    let metros1 = prompt('Qual a largura? (informe somente número e use "." nos valores decimais)');
+    let metros2 = prompt('Qual o cumprimento? (informe somente número e use "." nos valores decimais)');
     let resultadoMetros = (metros1 * metros2);
-    exibirTextoNaTela('p', `O resultado dos metros quadrados é de R$ ${resultadoMetros}`);
+    exibirTextoNaTela('p', `O resultado dos metros quadrados é de R$ ${resultadoMetros.toFixed(2)}`);
 }
 
 function temp(){
@@ -215,6 +221,26 @@ function parInp(){
         exibirTextoNaTela('p', `${numeroPI} é Impar`);
     }
 
+}
+
+function ida(){
+    let ida01 = parseInt(prompt('Qual a sua idade?'));
+        if(ida01 >= 18){
+            return  exibirTextoNaTela('p', `Você tem ${ida01} anos e é maior de idade`);
+        }else if(ida01 <= 17){
+            return exibirTextoNaTela('p', `Você tem ${ida01} anos e é menor de idade`);
+    } 
+}
+
+function bi() {
+
+    let bi01 = parseInt(prompt('Qual a sua idade?'));
+
+    if ((bi01 % 4 === 0 && bi01 % 100 !== 0) || bi01 % 400 === 0) {
+        return exibirTextoNaTela('p', `${bi01} é ano bissexto`);
+    } else {
+        return exibirTextoNaTela('p', `${bi01} Não é ano bissexto`);
+    }
 }
 
 function reiniciar() {
