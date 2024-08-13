@@ -154,7 +154,7 @@ function metros(){
     let metros1 = prompt('Qual a largura? (informe somente número e use "." nos valores decimais)');
     let metros2 = prompt('Qual o cumprimento? (informe somente número e use "." nos valores decimais)');
     let resultadoMetros = (metros1 * metros2);
-    exibirTextoNaTela('p', `O resultado dos metros quadrados é de R$ ${resultadoMetros.toFixed(2)}`);
+    exibirTextoNaTela('p', `O resultado dos metros quadrados é de ${resultadoMetros.toFixed(2)}`);
 }
 
 function temp(){
